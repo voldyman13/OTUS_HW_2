@@ -17,3 +17,7 @@ venv.bak/
 .pytest_cache/
 src/__pycache__/
 tests/__pycache__/
+
+# files
+files/books.csv
+files/users.json
