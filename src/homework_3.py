@@ -1,4 +1,3 @@
-import csv
 import json
 from csv import DictReader
 
@@ -18,8 +17,13 @@ with open('../files/books.csv', newline='') as csv_file:
                 # получаем следующую книгу
                 book = next(books)
                 # выдаем книгу
-                user["books"].append(book)
+                user["books"].append(
+                    {"Title": book["Title"], "Author": book["Author"], "Genre": book["Genre"], "Pages": book["Pages"]})
                 size -= 1
+    data = []
+    for user in users:
+        data.append({"name": user["name"], "gender": user["gender"], "address": user["address"], "age": user["age"],
+                     "books": user["books"]})
 # сохраняем результат в файл в формате json
 with open("../files/result.json", "w") as result_file:
-    json.dump(users, result_file, indent=4)
+    json.dump(data, result_file, indent=4)

@@ -13,6 +13,7 @@ env.bak/
 venv.bak/
 
 # mypy
+__pycache__/
 .py_cache/
 .pytest_cache/
 src/__pycache__/
@@ -21,3 +22,7 @@ tests/__pycache__/
 # files
 files/books.csv
 files/users.json
+
+# other files
+conftest.py
+test_module.py
