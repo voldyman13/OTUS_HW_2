@@ -1,0 +1,111 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "list of breweries",
+    "description": "list of breweries based on a search term",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "brewery_type": {
+                "type": "string",
+                "enum": [
+                    "micro",
+                    "nano",
+                    "regional",
+                    "brewpub",
+                    "large",
+                    "planning",
+                    "bar",
+                    "contract",
+                    "closed"
+                ]
+            },
+            "street": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "maxLength": 50
+            },
+            "address_2": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "address_3": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "city": {
+                "type": "string"
+            },
+            "county_province": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "state": {
+                "type": "string"
+            },
+            "postal_code": {
+                "type": "string"
+            },
+            "country": {
+                "type": "string"
+            },
+            "longitude": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "latitude": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "phone": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "website_url": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "format": "uri"
+            },
+            "updated_at": {
+                "type": "string",
+                "format": "date-time"
+            },
+            "created_at": {
+                "type": "string",
+                "format": "date-time"
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "brewery_type",
+        "street",
+        "city",
+        "state",
+        "country",
+        "phone"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "list of breweries",
+    "description": "list of names and ids of breweries based on a search term",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "maxLength": 100
+            },
+            "name": {
+                "type": "string",
+                "maxLength": 100
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ]
+}
