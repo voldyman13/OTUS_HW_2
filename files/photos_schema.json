@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "list of photos",
+    "description": "schema of response get request 'https:/jsonplaceholder.typicode.com/albums/1/photos'",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "albumId": {
+                "type": "integer"
+            },
+            "id": {
+                "type": "integer"
+            },
+            "title": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string",
+                "format": "uri"
+            },
+            "thumbnailUrl": {
+                "type": "string",
+                "format": "uri"
+            }
+        }
+    },
+    "required": [
+        "albumId",
+        "id",
+        "title",
+        "url",
+        "thumbnailUrl"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "list of comments",
+    "description": "schema of response get request 'https:/jsonplaceholder.typicode.com/posts/1/comments'",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "postId": {
+                "type": "integer"
+            },
+            "id": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string",
+                "format": "email"
+            },
+            "body": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "postId",
+        "email",
+        "body"
+    ]
+}
